@@ -1,0 +1,71 @@
+-------------------------------- 
+---Movie Production Companies---
+--------------------------------
+
+--Query that tests the database's functionality.txt
+--Includes:
+--1.SELECT statements for the requirements
+
+-------------------------------------------------SELECT statements for the requirements-------------------------------------------------
+SELECT company_id, shared_with_company_id, shared_with_company_name
+FROM Grants;
+
+SELECT *
+FROM EmployeePhoneNumbers;
+
+SELECT *
+FROM GovernmentAuthorities;
+
+SELECT GovernmentAuthorities.government_id, GovernmentAuthorities.government_authority_name, GovernmentAuthorities.registered_company_name, Shareholders.shareholder_id, Shareholders.shareholder_name
+FROM GovernmentAuthorities
+INNER JOIN Shareholders ON Shareholders.company_id = GovernmentAuthorities.company_id;
+
+SELECT first_name, last_name, employee_role
+FROM Employees;
+
+SELECT *
+FROM Departments;
+
+SELECT *
+FROM FilmRoles;
+
+-------------------------------------------------SELECT statements to display the whole Database-------------------------------------------------
+
+SELECT *
+FROM ProductionCompanies;
+
+SELECT *
+FROM Shareholders;
+
+SELECT *
+FROM GovernmentAuthorities;
+
+SELECT *
+FROM GrantApplications;
+
+SELECT *
+FROM Grants;
+
+SELECT *
+FROM Movies;
+
+SELECT *
+FROM Employees;
+
+SELECT *
+FROM EmployeePhoneNumbers;
+
+SELECT *
+FROM FilmRoles;
+
+SELECT *
+FROM Bonuses;
+
+SELECT *
+FROM Departments;
+
+SELECT *
+FROM StaffMembers;
+
+SELECT *
+FROM CrewMembers;
