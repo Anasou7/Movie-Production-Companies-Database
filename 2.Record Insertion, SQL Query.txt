@@ -1,0 +1,1820 @@
+-------------------------------- 
+---Movie Production Companies---
+--------------------------------
+
+--Record Insertion, SQL Query.txt
+--Includes:
+--1.Inserting new records in all the tables
+--2.Selecting everything within the tables to make sure the records were inserted properly
+
+---------------------------Inserting new records into ProductionCompanies---------------------------
+INSERT INTO ProductionCompanies 
+(company_id, company_name, company_country, company_city, company_zip_code, company_type, number_of_employees, net_worth)
+VALUES 
+(395728, 'Austrian Film Company', 'Austria', 'Vienna', '1010', 'Non-profit Organization', 18, 1000000);
+
+INSERT INTO ProductionCompanies 
+(company_id, company_name, company_country, company_city, company_zip_code, company_type, number_of_employees, net_worth)
+VALUES 
+(847129, 'Bright Lights Film Company', 'France', 'Paris', '75001', 'Private Limited Company', 15, 10000000);
+
+INSERT INTO ProductionCompanies 
+(company_id, company_name, company_country, company_city, company_zip_code, company_type, number_of_employees, net_worth)
+VALUES 
+(938274, 'Eurowide Films', 'Germany', 'Berlin', '10115', 'For-Profit Organization', 17, 20000000);
+
+INSERT INTO ProductionCompanies 
+(company_id, company_name, company_country, company_city, company_zip_code, company_type, number_of_employees, net_worth)
+VALUES 
+(569482, 'Cinecraft Productions', 'United Kingdom', 'London', 'EC1A 4JA', 'Private Limited Company', 18, 30000000);
+
+INSERT INTO ProductionCompanies 
+(company_id, company_name, company_country, company_city, company_zip_code, company_type, number_of_employees, net_worth)
+VALUES 
+(217435, 'Midnight Movies', 'Spain', 'Madrid', '28001', 'Private Limited Company', 16, 40000000);
+
+--Selecting all the records in ProductionCompanies to make sure everything was inserted properly
+SELECT *
+FROM ProductionCompanies
+
+
+
+
+
+---------------------------Inserting new records into Shareholders---------------------------
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(512, 395728, 'Julia Bauer', 'Steiner', 'Thomas', 'Vienna', '+43 1 123 4567', 'VI9382746', 'ZXD123456');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(157, 395728, 'Michael Brown', 'Müller', 'Johan', 'Vienna', '+43 1 345 6789', 'VI7569482', 'XYZ987654');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(938, 395728, 'Anna Pichler', 'Wagner', 'Alexander', 'Vienna', '+43 1 789 0153', 'VI2317435', 'ABC567890');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(729, 847129, 'Emily Davis', 'Johnson', 'Thomas', 'Paris', '+06 31 29 33 19', '56011628', '954736');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(841, 847129, 'Laurent Dupont', 'Lavigne', 'Jacques', 'Paris', '+06 26 18 84 71', '83956702', '345621');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(635, 847129, 'Marie Martin', 'Monet', 'Pierre', 'Paris', '+06 42 72 89 62', '24016837', '234567');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(243, 847129, 'Alexandre Moreau', 'Blanchet', 'Marc', 'Paris', '+06 22 63 48 95', '75839463', '753498');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(159, 938274, 'Hans Schmidt', 'Müller', 'Johann', 'Berlin', '+49 30 1234 5678', '123456', 'AB123456');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(568, 938274, 'Gisela Müller', 'Schneider', 'Friedrich', 'Berlin', '+49 30 2345 6789', '48291723', 'CD789012');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(786, 938274, 'Klaus Weber', 'Wagner', 'Heinrich', 'Berlin', '+49 30 4567 8901', '345678', 'EF345678');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(410, 569482, 'Emma Taylor', 'Sallow', 'William', 'London', '+44 207 123 4567', 'HM 06 81 66 A', 'ZXJ945321');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(625, 569482, 'David Wilson', 'Fernsby', 'Charles', 'London', '+44 207 123 4568', 'LN 47 15 84 X', 'WFE567891');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(927, 569482, 'Lena Jones', 'Phillips', 'George', 'London', '+44 207 123 4569', 'BW 34 33 33 D', 'QWY235679');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(348, 569482, 'John Marks', 'Grealish', 'George', 'London', '+34 207 123 4570', 'EH 50 51 96 D', 'UDC9876');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(761, 217435, 'Sara Gonzalez', 'Lopez', 'Juan', 'Madrid', '+34 664 193 1529', 'ES0089274634', 'E99999995');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(830, 217435, 'Miguel Rodriguez', 'Morales ', 'Pedro', 'Madrid', '+34 664 256 941', 'ES0039686022', 'E88888887');
+
+INSERT INTO Shareholders
+(shareholder_id, company_id, shareholder_name, mothers_maiden_name, fathers_first_name, shareholder_birth_town, shareholder_phone_number, shareholder_insurance_no, shareholder_passport_no)
+VALUES
+(904, 217435, 'Laura Moreno', 'Pérez', 'Antonio', 'Madrid', '+34 664 456 789', 'ES0027845566', 'E77777779');
+
+--Selecting all the records in Shareholders to make sure everything was inserted properly
+SELECT *
+FROM Shareholders
+
+
+
+
+---------------------------Inserting new records into GovernmentAuthorities---------------------------
+INSERT INTO GovernmentAuthorities
+(government_id, company_id, government_authority_name, registered_company_name, registration_date, registration_cost)
+VALUES
+(43, 395728, 'Austrian Film Institute', 'Austrian Film Company', '2020-04-12', 11935);
+
+INSERT INTO GovernmentAuthorities
+(government_id, company_id, government_authority_name, registered_company_name, registration_date, registration_cost)
+VALUES
+(49, 938274, 'German Federal Film Board', 'Eurowide Films', '2016-02-26', 19000);
+
+INSERT INTO GovernmentAuthorities
+(government_id, company_id, government_authority_name, registered_company_name, registration_date, registration_cost)
+VALUES
+(33, 847129, 'Centre national du cinéma et de l image animée', 'Bright Lights Film Company', '2018-07-03', 29399);
+
+INSERT INTO GovernmentAuthorities
+(government_id, company_id, government_authority_name, registered_company_name, registration_date, registration_cost)
+VALUES
+(44, 569482, 'British Film Institute', 'Cinecraft Productions', '2017-05-22', 51254);
+
+INSERT INTO GovernmentAuthorities
+(government_id, company_id, government_authority_name, registered_company_name, registration_date, registration_cost)
+VALUES
+(34, 217435, 'Institute of Cinematography and Audiovisual Arts', 'Midnight Movies', '2014-02-15', 40000);
+
+--Selecting all the records in GovernmentAuthorities to make sure everything was inserted properly
+SELECT *
+FROM GovernmentAuthorities;
+
+
+
+
+---------------------------Inserting new records into GrantApplications---------------------------
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(456123, 395728, '2021-01-01', 500000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(789456, 847129, '2020-01-01', 800000, 'Denied');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(789457, 847129, '2020-03-01', 600000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(654123, 938274, '2019-04-01', 1000000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(987456, 938274, '2020-04-01', 2000000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(456789, 569482, '2018-05-01', 30000000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(554741, 569482, '2019-02-01', 30000000, 'Denied');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(572513, 569482, '2019-05-12', 3000000, 'Approved');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(964765, 217435, '2022-01-05', 5000000, 'Denied');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(964767, 217435, '2022-01-07', 4500000, 'Denied');
+
+INSERT INTO GrantApplications
+(application_number, company_id, application_date, amount_requested, application_outcome)
+VALUES
+(964770, 217435, '2022-01-10', 3500000, 'Approved');
+
+--Selecting all the records in GrantApplications to make sure everything was inserted properly
+SELECT *
+FROM GrantApplications;
+
+
+
+
+
+---------------------------Inserting new records into Grants---------------------------
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(124562, 456123, 395728, 'Creative Capital Grant', 'Creative Capital Organization', '2023-01-01', 650000);
+
+INSERT INTO Grants 
+(grant_id, application_number, company_id, shared_with_company_id, shared_with_company_name, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES 
+(369332, 789457, 847129, 395728, 'Austrian Film Company', 'International Collaboration Grant', 'Film Funding Agency', '2022-12-31', 100000);
+
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(577777, 654123, 938274, 'KinoForderung Grant', 'German Federal Film Board', '2020-04-01', 1000000);
+
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(635559, 987456, 938274, 'KinoForderung Grant', 'German Federal Film Board', '2021-04-01', 2000000);
+
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(654309, 456789, 569482, 'British Film Fund', 'British Film Institute', '2020-05-01', 3250000);
+
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(654390, 572513, 569482, 'British Film Fund', 'British Film Institute', '2021-05-12', 3250000);
+
+INSERT INTO Grants
+(grant_id, application_number, company_id, grant_name, funding_body, grant_deadline, grant_max_amount)
+VALUES
+(723099, 964770, 217435, 'CineEspana Grant', 'Cinematography and Audiovisual Arts', '2024-01-10', 3500000);
+
+--Selecting all the records in Grants to make sure everything was inserted properly
+SELECT *
+FROM Grants;
+
+
+
+
+
+---------------------------Inserting new records into Movies---------------------------
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(152846, 395728, 'The Austrian Heist', '2022-06-01');
+
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(781429, 847129, 'Parisian Love Story', '2022-07-15');
+
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(360459, 938274, 'Berlin Nights', '2022-08-30');
+
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(462958, 569482, 'London Fog', '2022-09-15');
+
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(928371, 217435, 'Madrid Sunrise', '2021-10-01');
+
+INSERT INTO Movies
+(movie_id, company_id, movie_title, movie_release_date)
+VALUES
+(928372, 217435, 'Madrid Sunrise 2', '2022-12-01');
+
+--Selecting all the records in Movies to make sure everything was inserted properly
+SELECT *
+FROM Movies;
+
+
+
+
+
+---------------------------Inserting new records into Employees---------------------------
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4301, 395728, 'Producer', 'Johan', 'Schmidt', 'David', '1990-01-01', '2020-04-13', 'johan.Schmidt@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4302, 395728, 'Director', 'Emma', 'Bach', NULL, '1985-03-15', '2020-04-13', 'emma.bach@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4303, 395728, 'Costume Designer', 'Marie', 'Gruber', NULL, '1989-05-09', '2020-04-13', 'marie.gruber@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4304, 395728, 'Writer', 'Paul', 'Leitner', 'Elias', '1975-01-23', '2020-04-13', 'paul.leitner@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4305, 395728, 'Editor', 'Jakob', 'Hofer', NULL, '1994-12-17', '2020-04-13', 'jakob.hofer@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4306, 395728, 'Actor', 'Peter', 'Müller', NULL, '1992-09-12', '2020-04-13', 'peter.muller@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4307, 395728, 'Actor', 'Anna', 'Schütz', 'Marie', '1996-01-19', '2020-04-13', 'anna.schutz@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4308, 395728, 'Actor', 'Markus', 'Mayer', 'Johan', '1978-11-11', '2020-04-13', 'markus.mayer@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4309, 395728, 'Actor', 'Christoph', 'Bergmann', NULL, '1978-11-11', '2020-04-13', 'christoph.bergmann@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4310, 395728, 'Actor', 'Maria', 'Kohlmeier', NULL, '1962-02-18', '2020-04-13', 'maria.kohlmeier@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4311, 395728, 'Actor', 'Stefan', 'Weib', NULL, '1988-03-01', '2020-04-13', 'stefan.weib@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4312, 395728, 'Actor', 'Michaela', 'Aigner', 'Anja', '1990-07-07', '2020-04-13', 'michaela.aigner@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4313, 395728, 'Staff', 'Felix', 'Höfler', NULL, '1993-02-02', '2020-04-13', 'felix.hofler@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4314, 395728, 'Staff', 'Anja', 'Eder', NULL, '1999-02-12', '2020-04-13', 'anja.eder@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4315, 395728, 'Staff', 'Markus', 'Koller', NULL, '1991-09-15', '2020-04-13', 'markus.koller@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3301, 847129, 'Producer', 'Amelie', 'Rousseau', 'Lucie', '1987-01-29', '2018-07-04', 'amelie.rousseau@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3302, 847129, 'Director', 'Eric', 'Gagnon', NULL, '1992-07-13', '2018-07-04', 'eric.gagnon@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3303, 847129, 'Costume Designer', 'Melanie', 'Gagnon', NULL, '1993-02-25', '2018-07-04', 'melanie.gagnon@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3304, 847129, 'Writer', 'Lucie', 'Gautier', NULL, '1984-04-09', '2018-07-04', 'lucie.gautier@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3305, 847129, 'Editor', 'Maxime', 'Moreau', 'Sophie', '1996-01-25', '2018-07-04', 'maxime.moreau@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3306, 847129, 'Actor', 'Mathieu', 'Leblanc', NULL, '1988-07-30', '2018-07-04', 'mathieu.leblanc@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3307, 847129, 'Actor', 'Anais', 'Robinchaud', NULL, '1990-04-21', '2018-07-09', 'anais.robinchaud@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3308, 847129, 'Actor', 'David', 'Roy', 'Jame', '1979-09-29', '2018-08-11', 'david.roy@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3309, 847129, 'Actor', 'Lucie', 'Martin', NULL, '1971-05-20', '2018-09-24', 'lucie.martin@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3310, 847129, 'Staff', 'Caroline', 'Dubois', NULL, '1977-07-24', '2018-07-04', 'caroline.dubois@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3311, 847129, 'Staff', 'Marie', 'Decroix', NULL, '1982-04-14', '2018-07-04', 'marie.decroix@brightlights.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4901, 938274, 'Producer', 'Johan', 'Schmidt', 'David', '1990-01-01', '2020-04-13', 'johan.Schmidt@austrianfilmcompany.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4902, 938274, 'Director', 'Johan', 'Muller', NULL, '1985-03-15', '2016-02-26', 'johan.muller@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4903, 938274, 'Costume Designer', 'Maria', 'Bauer', NULL, '1978-02-09', '2016-02-26', 'maria.bauer@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4904, 938274, 'Writer', 'Bertha', 'Messer', 'Maria', '1979-08-29', '2016-02-26', 'bertha.messer@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4905, 938274, 'Editor', 'Liese', 'Wehner', NULL, '1998-04-11', '2016-02-26', 'liese.wehner@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4906, 938274, 'Actor', 'Dierk', 'Schmidt', NULL, '1992-06-05', '2016-02-26', 'dierk.schmidt@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4907, 938274, 'Actor', 'Emil', 'Richter', NULL, '1999-02-01', '2016-02-26', 'emil.richter@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4908, 938274, 'Actor', 'Gertrude', 'Dreher', NULL, '1992-12-14', '2016-02-26', 'gertrude.dreher@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4909, 938274, 'Staff', 'Frank', 'Madde', NULL, '1986-02-11', '2016-02-26', 'frank.madde@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4910, 938274, 'Staff', 'Seppel', 'Warner', NULL, '1996-02-27', '2016-02-26', 'seppel.warner@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4911, 938274, 'Staff', 'Sascha', 'Weber', NULL, '1991-01-21', '2016-02-26', 'sascha.weber@eurowide.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4401, 569482, 'Producer', 'John', 'Barnes', NULL, '1994-05-05', '2017-05-22', 'john.barnes@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4402, 569482, 'Director', 'Rowan', 'Bennington', NULL, '1991-07-03', '2017-05-22', 'rowan.bennington@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4403, 569482, 'Costume Designer', 'Melissa', 'Cunnington', 'Alicia', '1989-01-15', '2017-05-22', 'melissa.cunnington@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4404, 569482, 'Writer', 'Jim', 'Birdson', NULL, '1981-01-30', '2017-05-22', 'jim.birdson@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4405, 569482, 'Editor', 'Vanessa', 'Hughes', NULL, '1990-06-20', '2017-05-22', 'vanessa.hughes@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4406, 569482, 'Actor', 'Oliver', 'Campbell', NULL, '1979-03-11', '2017-05-22', 'oliver.campbell@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4407, 569482, 'Actor', 'Jake', 'Cunningham', NULL, '1989-03-17', '2017-05-22', 'jake.cunningham@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4408, 569482, 'Actor', 'George', 'Smith', NULL, '1996-02-03', '2017-05-22', 'george.smith@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4409, 569482, 'Staff', 'Victoria', 'Williams', NULL, '1992-09-08', '2017-05-22', 'victoria.williams@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4410, 569482, 'Staff', 'Sophie', 'Mason', NULL, '1996-01-05', '2017-05-22', 'sophie.mason@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(4411, 569482, 'Staff', 'Jake', 'Davies', NULL, '1995-07-09', '2017-05-22', 'jake.davies@cinecraftprod.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3401, 217435, 'Producer', 'Jorge', 'Molina', NULL, '1983-01-09', '2014-02-15', 'jorge.molina@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3402, 217435, 'Director', 'Esteban', 'Rordigues', 'Michael', '1977-01-22', '2014-02-15', 'esteban.rodridgues@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3403, 217435, 'Costume Designer', 'Maria', 'Espoza', NULL, '1997-09-09', '2014-02-15', 'maria.espoza@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3404, 217435, 'Writer', 'Jordi', 'Morata', NULL, '1990-07-25', '2014-02-15', 'jordi.morata@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3405, 217435, 'Editor', 'Emmanuel', 'Alves', NULL, '1998-06-10', '2014-02-15', 'emmanuel.alves@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3406, 217435, 'Actor', 'Emmanuel', 'Garcia', 'Hector', '1988-03-11', '2014-02-15', 'emmanuel.garcia@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3407, 217435, 'Actor', 'Ricardo', 'Lugo', 'Sebastian', '1979-04-24', '2014-02-15', 'ricardo.lugo@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3408, 217435, 'Actor', 'Lucas', 'Desoto', NULL, '1994-08-08', '2014-02-15', 'lucas.desoto@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3409, 217435, 'Actor', 'Carlos', 'Rubio', NULL, '1996-02-09', '2014-02-15', 'carlos.rubio@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3410, 217435, 'Actor', 'Sofia', 'Torres', 'Maria', '1986-05-11', '2014-02-15', 'sofia.torres@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3411, 217435, 'Actor', 'Camila', 'Ramirez', NULL, '1990-01-19', '2014-02-15', 'camila.ramirez@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3412, 217435, 'Staff', 'Carla', 'Perez', 'Fernanda', '1998-07-14', '2014-02-15', 'carla.perez@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3413, 217435, 'Staff', 'Maria', 'Sanchez', 'Valeria', '1989-02-22', '2014-02-15', 'maria.sanchez@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3414, 217435, 'Staff', 'Juan', 'Cruz', NULL, '1981-06-14', '2014-02-15', 'juan.cruz@midnightmovies.com');
+
+INSERT INTO Employees
+(employee_id, company_id, employee_role, first_name, last_name, middle_name, employee_birth_date, employee_start_date, employee_email)
+VALUES
+(3415, 217435, 'Staff', 'Eduardo', 'Rivera', NULL, '1995-09-01', '2014-02-15', 'eduardo.rivera@midnightmovies.com');
+
+--Selecting all the records in Employees to make sure everything was inserted properly
+SELECT *
+FROM Employees;
+
+
+
+
+---------------------------Inserting new records into EmployeePhoneNumbers---------------------------
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3301, '+06 45 32 19 79', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3302, '+06 45 88 52 32', '+06 45 65 21 80', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3303, '+06 45 85 71 33', '+06 45 43 92 11', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3304, '+06 45 38 52 22', '+06 45 33 24 19', '06 45 75 53 29', NULL, '1.Personal, 2.Work, 3.Home');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3305, '+06 45 18 73 23', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3306, '+06 45 21 81 84', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3307, '+06 45 16 32 53', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3308, '+06 21 90 32 15', '+06 54 08 72 39', '+06 67 91 43 21', '+06 33 01 54 87', '1.Personal, 2.Work, 3.Home, 4.Wife contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3309, '+06 44 82 63 19', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3310, '+06 73 95 04 51', NULL, NULL, NULL, '1.Primary');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3311, '+06 22 73 44 76', '+06 81 94 65 27', '+06 39 05 16 98', NULL, '1.Personal, 2.Work, 3.Home');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3401, '+34 669 998 889', '+34 669 844 771', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3402, '+34 622 463 231', '+34 672 576 897', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3403, '+34 621 024 027', '+34 647 699 181', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3404, '+34 629 064 232', '+34 696 661 928', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3405, '+34 681 829 074', '+34 678 865 972', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3406, '+34 649 886 590', '+34 686 849 810', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3407, '+34 626 536 371', '+34 612 098 870', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3408, '+34 603 520 094', '+34 647 624 037', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3409, '+34 632 611 147', '+34 679 456 961', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3410, '+34 638 668 497', '+34 689 936 990', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3411, '+34 662 492 189', '+34 672 765 756', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3412, '+34 612 869 556', '+34 677 778 801', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3413, '+34 684 470 080', '+34 681 666 659', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3414, '+34 656 689 579', '+34 644 829 671', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(3415, '+34 686 523 103', '+34 677 579 981', NULL, NULL, '1.Personal, 2.Work');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4901, '+49 182 586 105', '+49 191 662 584', '+49 163 615 569', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4902, '+49 191 547 196', '+49 136 615 840', '+49 199 660 856', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4903, '+49 152 642 682', '+49 137 461 189', '+49 152 638 456', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4904, '+49 131 656 099', '+49 146 632 986', '+49 199 638 987', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4905, '+49 167 601 756', '+49 199 639 791', '+49 152 656 782', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4906, '+49 199 661 786', '+49 191 638 766', '+49 167 661 084', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4907, '+49 199 661 716', '+49 199 638 738', '+49 191 668 452', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4908, '+49 199 639 719', '+49 191 662 460', '+49 199 661 744', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4909, '+49 191 638 771', '+49 199 639 779', '+49 191 662 879', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4910, '+49 199 638 732', '+49 199 661 734', '+49 199 661 779', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4911, '+49 199 638 129', '+49 199 661 999', '+49 199 661 888', NULL, '1.Personal, 2.Work 3.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4301, '+43 669 844 324', '+43 681 002 930', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4302, '+43 699 882 774', '+43 699 886 900', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4303, '+43 699 304 919', '+43 699 101 700', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4304, '+43 699 002 377', '+43 699 050 389', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4305, '+43 699 886 927', '+43 699 816 228', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4306, '+43 699 596 900', '+43 699 346 008', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4307, '+43 699 226 009', '+43 699 456 010', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4308, '+43 699 340 001', '+43 699 210 219', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4309, '+43 699 665 335', '+43 699 113 954', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4310, '+43 699 915 871', '+43 699 991 517', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4311, '+43 699 217 290', '+43 699 336 911', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4312, '+43 699 715 290', '+43 699 886 920', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4313, '+43 699 176 231', '+43 699 156 162', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4314, '+43 699 866 923', '+43 699 886 924', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4315, '+43 699 886 425', '+43 699 156 926', NULL, NULL, '1.Primary, 2.Family Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4401, '+44 772 658 4931', '+44 761 413 4510', '+44 744 884 6547', '+44 782 567 2098', '1.Personal, 2.Work, 3.Emergency Contact, 4.Agent Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4402, '+44 766 865 9754', '+44 791 789 2368', '+44 778 049 7013', '+44 735 287 5842', '1.Personal, 2.Work, 3.Emergency Contact, 4.Agent Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4403, '+44 729 492 0871', '+44 765 019 8371', '+44 793 765 1408', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4404, '+44 712 674 5094', '+44 723 619 1289', '+44 777 874 1382', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4405, '+44 776 697 8235', '+44 714 927 8031', '+44 782 718 3490', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4406, '+44 713 079 4629', '+44 782 862 4579', '+44 782 462 5190', '+44 796 092 8647', '1.Personal, 2.Work, 3.Emergency Contact, 4.Agent Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4407, '+44 735 185 7920', '+44 736 829 6015', '+44 793 821 4305', '+44 765 691 5203', '1.Personal, 2.Work, 3.Emergency Contact, 4.Agent Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4408, '+44 735 283 5697', '+44 766 662 4279', '+44 729 462 8519', '+44 778 691 2345', '1.Personal, 2.Work, 3.Emergency Contact, 4.Agent Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4409, '+44 723 027 8540', '+44 723 789 3490', '+44 713 079 8540', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4410, '+44 793 891 2981', '+44 792 687 8540', '+44 736 829 8647', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+INSERT INTO EmployeePhoneNumbers
+(employee_id, employee_phone_number_primary, employee_phone_number_second, employee_phone_number_third, employee_phone_number_fourth, phone_number_description)
+VALUES
+(4411, '+44 735 029 4629', '+44 791 691 1289', '+44 778 019 8540', NULL, '1.Personal, 2.Work, 3.Emergency Contact');
+
+--Selecting all the records in EmployeePhoneNumbers to make sure everything was inserted properly
+SELECT *
+FROM EmployeePhoneNumbers;
+
+
+
+
+
+---------------------------Inserting new records into FilmRoles---------------------------
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4306, 'The mastermind', 'He is the mind behind the heist');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4307, 'The wife', 'She is the wife of the mastermind');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4308, 'Explosions expert', 'He is the explosions expert that destroys walls for the team to get in');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4310, 'The distraction', 'She is the distraction that makes sure no one expects it');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4311, 'The hacker', 'He is the one responsible for everything related to computers');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(152846, 4312, 'The detective', 'She is the one that tries to catch the team');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(360459, 4906, 'James', 'James is the focus of the movie');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(360459, 4907, 'Gina', 'Gina is the love interest of James');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(360459, 4908, 'John', 'John is the ex-boyfriend of Gina');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(781429, 3306, 'Marc', 'Marc is the main character');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(781429, 3307, 'Claire', 'Claire is the first love of Marc');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(781429, 3308, 'Olivier', 'Olivier is the best friend of Marc');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(781429, 3309, 'Linda', 'Linda is the ex-girlfriend of Marc who is trying to win him back');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928371, 3406, 'Gustavo', 'Gustavo is a club owner and car enthusiast');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928371, 3410, 'Maria', 'Maria is the wife of Gustavo, she is constantly trying to make him quit racing cars');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928371, 3407, 'Morti', 'Morti is always trying to win against Gustavo, some times not fairly');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928371, 3409, 'Rodri', 'Rodri is the best friend of Gustavo, who like his wife is always trying to stop him from racing cars');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928372, 3406, 'Twin brother of Gustavo', 'After Gustavo died, his twin brother appeared to claim his night club');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928372, 3410, 'Maria the widow', 'Maria is trying to maintain ownership of the nightclub after Gustavo died');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(928372, 3411, 'Bella', 'Bella is the wife of the twin brother of Gustavo');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(462958, 4406, 'Blake', 'When a persistant fog appears in London, scientist Blake Griffindor decides to investigate');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(462958, 4407, 'Harry', 'Harry is the assistant of Blake, he does not like the fact that Blake woke him up in the middle of the night');
+
+INSERT INTO FilmRoles 
+(movie_id, employee_id, film_role, film_role_description)
+VALUES 
+(462958, 4407, 'Tobias', 'Tobias is an chemist who went rogue and is the main suspect of Blake');
+
+--Selecting all the records in FilmRoles to make sure everything was inserted properly
+SELECT *
+FROM FilmRoles;
+
+
+
+
+
+---------------------------Inserting new records into Bonuses---------------------------
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330101, 3301, 'Producer Bonus', 2000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330201, 3302, 'Director Bonus', 3000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330301, 3303, 'Costume Designer Bonus', 1000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330401, 3304, 'Writer Bonus', 3000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330501, 3305, 'Editor Bonus', 1500);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330601, 3306, 'Main Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330701, 3307, 'Actor Bonus', 4000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330801, 3308, 'Actor Bonus', 4000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(330901, 3309, 'Actor Bonus', 4000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(331001, 3310, 'Staff Bonus', 800);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(331101, 3311, 'Staff Bonus', 800);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340101, 3401, 'Producer Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340201, 3402, 'Director Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340301, 3403, 'Custome Designer Bonus', 2500);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340401, 3404, 'Writer Bonus', 3800);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340501, 3405, 'Editor Bonus', 2900);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340601, 3406, 'Main Actor Bonus', 7000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340701, 3407, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340801, 3408, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(340901, 3409, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341001, 3410, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341101, 3411, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341201, 3412, 'Staff Bonus', 1000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341301, 3413, 'Staff Bonus', 1000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341401, 3414, 'Staff Bonus', 1000);
+
+INSERT INTO Bonuses
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(341501, 3415, 'Staff Bonus', 1000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430101, 4301, 'Producer Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430201, 4302, 'Director Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430301, 4303, 'Costume Designer Bonus', 2500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430401, 4304, 'Writer Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430501, 4305, 'Editor Bonus', 3500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430601, 4306, 'Main Actor Bonus', 8500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430701, 4307, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430801, 4308, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(430901, 4309, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431001, 4310, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431101, 4311, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431201, 4312, 'Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431301, 4313, 'Staff Bonus', 1100);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431401, 4314, 'Staff Bonus', 1100);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(431501, 4315, 'Staff Bonus', 1100);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440101, 4401, 'Producer Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440201, 4402, 'Director Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440301, 4403, 'Costume Designer Bonus', 2500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440401, 4404, 'Writer Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440501, 4405, 'Editor Bonus', 3000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440601, 4406, 'Main Actor Bonus', 6000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440701, 4407, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440801, 4408, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(440901, 4409, 'Staff Bonus', 900);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(441001, 4410, 'Staff Bonus', 900);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(441101, 4411, 'Staff Bonus', 900);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490101, 4901, 'Producer Bonus', 6500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490201, 4902, 'Director Bonus', 6500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490301, 4903, 'Costume Designer Bonus', 3200);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490401, 4904, 'Writer Bonus', 6500);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490501, 4905, 'Editor Bonus', 3700);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490601, 4906, 'Main Actor Bonus', 7000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490701, 4907, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490801, 4908, 'Actor Bonus', 5000);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(490901, 4909, 'Staff Bonus', 1300);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(491001, 4910, 'Staff Bonus', 1300);
+
+INSERT INTO Bonuses 
+(bonus_id, employee_id, bonus_type, bonus_amount)
+VALUES
+(491101, 4911, 'Staff Bonus', 1300);
+
+--Selecting all the records in Bonuses to make sure everything was inserted properly
+SELECT *
+FROM Bonuses;
+
+
+
+
+
+---------------------------Inserting new records into Departments---------------------------
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(31876, 'Janitors', 'Austrian Film Companies Headquarters', 'Kärntner Strasse 14,Floor 1');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(31877, 'Advertising', 'Austrian Film Companies Headquarters', 'Kärntner Strasse 14,Floor 2');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(31878, 'Human Resources', 'Austrian Film Companies Headquarters', 'Kärntner Strasse 14,Floor 3');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(32876, 'Advertising', 'Bright Lights 3A', 'Rue de Rivoli 99,Floor 1');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(32877, 'Human Resources', 'Bright Lights 3A', 'Rue de Rivoli 99,Floor 1');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(33876, 'Advertising', 'Midnight Movies Headquarters', 'Gran Via 22');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(33877, 'Human Resources', 'Midnight Movies Headquarters', 'Gran Via 22');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(33878, 'Janitors', 'Midnight Movies Headquarters', 'Gran Via 22');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(34876, 'Janitors', 'Cinecraft Building 1A', 'Oxford Street 55, Floor 1');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(34877, 'Human Resources', 'Cinecraft Building 1A', 'Oxford Street 55, Floor 2');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(34878, 'Advertising', 'Cinecraft Building 1A', 'Oxford Street 55, Floor 3');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(35876, 'Janitors', 'Eurowide Headquarters', 'Potsdamer Platz 89');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(35877, 'Human Resources', 'Eurowide Headquarters', 'Potsdamer Platz 89');
+
+INSERT INTO Departments 
+(department_id, department_name, department_building, department_building_address)
+VALUES
+(35878, 'Advertising', 'Eurowide Headquarters', 'Potsdamer Platz 89');
+
+--Selecting all the records in Departments to make sure everything was inserted properly
+SELECT *
+FROM Departments;
+
+
+
+
+
+---------------------------Inserting new records into StaffMembers---------------------------
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3310, 331001, 32876, 'Advertising Campaign Planner', 800, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3311, 331101, 32877, 'Human Resources Manager', 1000, 10);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3412, 341201, 33876, 'Advertising Campaign Planner', 800, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3413, 341301, 33877, 'Human Resources Manager', 1000, 10);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3414, 341401, 33878, 'Janitor', 750, 10);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(3415, 341501, 33878, 'Janitor', 750, 10);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4313, 431301, 31876, 'Janitor', 650, 6);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4314, 431401, 31877, 'Advertising CEO', 1200, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4315, 431501, 31878, 'HR Manager', 900, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4409, 440901, 34878, 'Head of Advertising', 1000, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4410, 441001, 34877, 'Head of HR', 1400, 10);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4411, 441101, 34876, 'Janitor', 800, 8);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4909, 490901, 35876, 'Janitor', 700, 6);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4910, 491001, 35877, 'Human Resources Manager', 900, 7);
+
+INSERT INTO StaffMembers 
+(employee_id, bonus_id, department_id, staff_occupation, staff_monthly_salary, staff_working_hours)
+VALUES
+(4911, 491101, 35878, 'Advertising Consultant', 600, 2);
+
+
+--Selecting all the records in StaffMembers to make sure everything was inserted properly
+SELECT *
+FROM StaffMembers;
+
+
+
+
+
+---------------------------Inserting new records into CrewMembers---------------------------
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3301, 330101, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3302, 330201, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3303, 330301, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3304, 330401, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3305, 330501, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3306, 330601, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3307, 330701, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3308, 330801, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3309, 330901, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3401, 340101, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3402, 340201, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3403, 340301, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3404, 340401, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3405, 340501, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3406, 340601, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3407, 340701, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3408, 340801, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3409, 340901, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3410, 341001, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(3411, 341101, 75);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4301, 430101, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4302, 430201, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4303, 430301, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4304, 430401, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4305, 430501, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4306, 430601, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4307, 430701, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4308, 430801, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4309, 430901, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4310, 431001, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4311, 431101, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4312, 431201, 35);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4401, 440101, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4402, 440201, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4403, 440301, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4404, 440401, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4405, 440501, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4406, 440601, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4407, 440701, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4408, 440801, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4901, 490101, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4902, 490201, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4903, 490301, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4904, 490401, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4905, 490501, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4906, 490601, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4907, 490701, 50);
+
+INSERT INTO CrewMembers 
+(employee_id, bonus_id, hourly_pay_rate)
+VALUES
+(4908, 490801, 50);
+
+--Selecting all the records in CrewMembers to make sure everything was inserted properly
+SELECT *
+FROM CrewMembers;
