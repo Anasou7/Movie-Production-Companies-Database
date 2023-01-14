@@ -1,0 +1,152 @@
+-------------------------------- 
+---Movie Production Companies---
+--------------------------------
+
+--Table Creation, SQL Query.txt
+--Includes:
+--1.Dropping Tables for initialization purposes.
+--2.Creating Tables and Columns.
+--3.Assigning Primary Keys and Foreign keys
+
+DROP TABLE IF EXISTS ProductionCompanies;
+CREATE TABLE ProductionCompanies (
+  company_id INTEGER PRIMARY KEY, --is the Primary Key for the ProductionCompanies table
+  company_name VARCHAR(255) NOT NULL, --is the company's name
+  company_country VARCHAR(255) NOT NULL, --specifies the country that the company is located in
+  company_city VARCHAR(255) NOT NULL, --specifies the city that the company is located in
+  company_zip_code VARCHAR(255) NOT NULL, --is the company's zip code
+  company_type VARCHAR(255) NOT NULL, --specifies the company's type, e.g non-profit
+  number_of_employees INTEGER NOT NULL, --specifies the company's number of employees
+  net_worth INTEGER NOT NULL --specifies the company's net worth
+);
+
+
+CREATE TABLE Shareholders (
+  shareholder_id INTEGER PRIMARY KEY, --is the Primary Key for the Shareholders table
+  company_id INTEGER NOT NULL, --is the Foreign Key that connects a production company to its shareholders
+  shareholder_name VARCHAR(255) NOT NULL, --is the shareholder's full name
+  mothers_maiden_name VARCHAR(255) NOT NULL, --specifies the shareholder mother's maiden name
+  fathers_first_name VARCHAR(255) NOT NULL, --specifies the shareholder father's first name
+  shareholder_birth_town VARCHAR(255) NOT NULL, --specifies the town that the shareholder was born in
+  shareholder_phone_number VARCHAR(255) NOT NULL, --is the shareholder's phone number
+  shareholder_insurance_no VARCHAR(255) NOT NULL, --is the shareholder's insurance number
+  shareholder_passport_no VARCHAR(255) NOT NULL, --is the shareholder's passport number
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE GovernmentAuthorities (
+  government_id INTEGER PRIMARY KEY, --is the Primary Key, I used country dial-in codes
+  company_id INTEGER NOT NULL, --is the Foreign Key that registers a production company to its Government
+  government_authority_name VARCHAR(255) NOT NULL, --is the name of the authority, e.g The British Film Commission in the UK
+  registered_company_name VARCHAR(255) NOT NULL, --the company's name that is registered under the authority
+  registration_date DATE NOT NULL, --the date that the company was registered
+  registration_cost INTEGER NOT NULL, --the cost of the registration
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE GrantApplications (
+  application_number INTEGER PRIMARY KEY, --is our Primary Key
+  company_id INTEGER NOT NULL, --is the Foreign Key that connects Production Companies to their grant applications
+  application_date DATE NOT NULL, --is the date that the company applied for a grant
+  amount_requested INTEGER NOT NULL, --is the amount of currency that the company requested
+  application_outcome VARCHAR(255) NOT NULL, --specifies if the outcome was successful or not
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE Grants (
+  grant_id INTEGER PRIMARY KEY, --is the Primary Key
+  application_number INTEGER NOT NULL, --is the Foreign Key that connects successful grant applications to grants
+  company_id INTEGER NOT NULL, --is the Foreign Key that connects Productions Companies to their Grants
+  shared_with_company_id INTEGER NULL, --is the company id that the previous company id shares the grant with
+  shared_with_company_name VARCHAR(255) NULL, --is the company name that company id shares the grant with
+  grant_name VARCHAR(255) NOT NULL, --is the name of the grant
+  funding_body VARCHAR(255) NOT NULL, --is the funding body of the grant
+  grant_deadline DATE NOT NULL, --is the grant's deadline
+  grant_max_amount INTEGER NOT NULL, --the max amount of currency that a company can request
+  FOREIGN KEY (application_number) REFERENCES GrantApplications(application_number),
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE Movies (
+  movie_id INTEGER PRIMARY KEY, --is the movie code
+  company_id INTEGER NOT NULL, --is the Foreign Key that connects Production Companies to the movies they produced
+  movie_title VARCHAR(255) NOT NULL, --is the title of the movie
+  movie_release_date DATE NOT NULL, --is the date that the movie was released
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE Employees (
+  employee_id INTEGER PRIMARY KEY, --is the Primary Key
+  company_id INTEGER NOT NULL, --is the Foreign Key that connects Production Companies to their employees
+  employee_role VARCHAR(255) NOT NULL, --specifies the role of the employee
+  first_name VARCHAR(255) NOT NULL, --the name of the employee
+  last_name VARCHAR(255) NOT NULL, --the last name of the employee
+  middle_name VARCHAR(255) NULL, --the "optional" middle name of the employee
+  employee_birth_date DATE NOT NULL, --the birthday of the employee
+  employee_start_date DATE NOT NULL, --the day that the employee started working for the company
+  employee_email VARCHAR(255) NOT NULL --the email of the employee
+  FOREIGN KEY (company_id) REFERENCES ProductionCompanies(company_id)
+);
+
+
+CREATE TABLE EmployeePhoneNumbers (
+  employee_id INTEGER, --is the primary key
+  employee_phone_number_primary VARCHAR(255) NOT NULL, --is the primary phone number of an employee, I used patterns that look like different companies ask for different numbers.
+  employee_phone_number_second VARCHAR(255) NULL, --is the first optional phone number of any employee
+  employee_phone_number_third VARCHAR(255) NULL, --is the second optional phone number of any employee
+  employee_phone_number_fourth VARCHAR(255) NULL, --is the third optional phone number of any employee
+  phone_number_description VARCHAR(255) NOT NULL, --describes the phone numbers
+  FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
+);
+
+
+CREATE TABLE FilmRoles (
+  movie_id INTEGER NOT NULL, --is the Foreign Key that connects movies to the Film Roles table
+  employee_id INTEGER NOT NULL, --is the Foreign Key that connects crew members to their Fil Roles
+  film_role VARCHAR(255) NOT NULL, --is the role that the actor is playing
+  film_role_description VARCHAR(255) NOT NULL, --describes the role
+  FOREIGN KEY (movie_id) REFERENCES Movies(movie_id),
+  FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
+);
+
+
+CREATE TABLE Bonuses (
+  bonus_id INTEGER PRIMARY KEY, --is the Primary Key
+  employee_id INTEGER NOT NULL, --is the Foreign Key that connects employees to their bonuses
+  bonus_type VARCHAR(255) NOT NULL, --describes the bonus
+  bonus_amount INTEGER NOT NULL, --is the amount of currency given to the employees as a bonus
+  FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
+);
+
+DROP TABLE IF EXISTS Departments;
+CREATE TABLE Departments (
+  department_id INTEGER PRIMARY KEY, --is the Primary Key
+  department_name VARCHAR(255) NOT NULL, --is the name of each department, e.g HR
+  department_building VARCHAR(255) NOT NULL, --is the name of the building the department is operating in
+  department_building_address VARCHAR(255) NOT NULL --is the address of the building
+);
+
+
+CREATE TABLE StaffMembers (
+  employee_id INTEGER PRIMARY KEY, --Is the Key that connects employees to their Staff Member role
+  bonus_id INTEGER NOT NULL, --is the Foreign Key that connects Staff Members to their bonuses
+  department_id INTEGER NOT NULL, --is the Foreign Key that connects Staff Members to their department
+  staff_occupation VARCHAR(255) NOT NULL, --is the occupation of the staff member, e.g video editor for advertisments
+  staff_monthly_salary INTEGER NOT NULL, --is their monthly salary
+  staff_working_hours INTEGER NOT NULL, --is the hours they work every day
+  FOREIGN KEY (bonus_id) REFERENCES Bonuses(bonus_id),
+  FOREIGN KEY (department_id) REFERENCES Departments(department_id)
+);
+
+
+CREATE TABLE CrewMembers (
+  employee_id INTEGER PRIMARY KEY, --is the Key that connects employees to their Crew Member role
+  bonus_id INTEGER NOT NULL, --is the Foreign Key that connects Crew Members to their bonuses
+  hourly_pay_rate INTEGER NOT NULL, --is the currency they get paid for every hour
+  FOREIGN KEY (bonus_id) REFERENCES Bonuses(bonus_id)
+);
